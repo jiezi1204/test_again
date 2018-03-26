@@ -1,0 +1,169 @@
+*{
+	padding:0;
+	margin:0;
+	border: none;
+}
+html,body{
+	height:100%;
+}
+.page{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color: #fff;
+}
+/*天空*/
+.sky{
+	height:60%;
+	width:100%;
+	position: relative;
+	overflow: hidden;
+	background: -webkit-linear-gradient(180deg,rgb(196, 228, 253),rgb(255,255,255));
+	background:    -moz-linear-gradient(180deg,rgb(196, 228, 253),rgb(255,255,255));
+	background:      -o-linear-gradient(180deg,rgb(196, 228, 253),rgb(255,255,255));
+	background:         linear-gradient(180deg,rgb(196, 228, 253),rgb(255,255,255));
+}
+.box{
+	display: inline-block;
+	margin:60px 20px;
+	position: relative;
+	-webkit-animation: move 20s infinite linear;  
+	-moz-animation: move 20s infinite linear;  
+	-ms-animation: move 20s infinite linear;
+	z-index: 1;
+}
+.cloud{ 
+  opacity: 1;  
+}
+/*云朵*/
+.cloud{
+	width:165px;
+	height:60px;
+	border-radius:50px;
+	background-color: #fff;
+	position:relative;
+	display: inline-block;
+}
+.cloud:before,
+.cloud:after{
+	content:""; 
+	position:absolute;
+	background-color: #fff;
+}
+.cloud:before{
+	width:90px; 
+	height:90px; 
+	top:-45px; 
+	right:25px; 
+	border-radius:100px;
+}
+.cloud:after{
+	width:50px;
+	height:50px;
+	top:-25px; 
+	left:25px; 
+	border-radius:80px;
+}
+.sky>.box>.cloud1{
+	-webkit-transform: scale(.8) ;
+	-o-transform: scale(.8) ;
+	-moz-transform: scale(.8) ;
+	transform: scale(.8) ;
+	top:60px;
+	left:40px;
+}
+.sky>.box>.cloud2{
+	-webkit-transform: scale(.8) ;
+	transform: scale(.8) ;
+	transform: scale(.8) ;
+	transform: scale(.8) ;
+	top:40px;
+	left:120px;
+}
+.sky>.box>.cloud3{
+	top:60px;
+	left:220px;
+}
+.sky>.box>.cloud4{
+	transform: scale(.5) ;
+	top:50px;
+	left:450px;
+}
+.sky>.box>.cloud5{
+	transform: scale(.7) ;
+}
+/*动画*/
+@-webkit-keyframes move{
+	0%{
+		left:-100%;
+	}
+	50%{
+		left:100%;opacity: 0.7;
+	}
+	51%{
+		left:100%;opacity: 0.7;
+	}
+	100%{
+		left:-100%;opacity: 1;
+	}
+}
+@-moz-keyframes move{
+	0%{
+		left:-100%;
+	}
+	50%{
+		left:100%;opacity: 0.7;
+	}
+	51%{
+		left:100%;opacity: 0.7;
+	}
+	100%{
+		left:-100%;opacity: 1;
+	}
+}
+@-o-keyframes move{
+	0%{
+		left:-100%;
+	}
+	50%{
+		left:100%;opacity: 0.7;
+	}
+	51%{
+		left:100%;opacity: 0.7;
+	}
+	100%{
+		left:-100%;opacity: 1;
+	}
+}
+@keyframes move{
+	0%{
+		left:-100%;
+	}
+	50%{
+		left:100%;opacity: 0.7;
+	}
+	51%{
+		left:100%;opacity: 0.7;
+	}
+	100%{
+		left:-100%;opacity: 1;
+	}
+}
+/*草地*/
+.lawn{
+	height:40%;
+	background: -moz-linear-gradient(0deg,rgb(148, 190, 89),rgb(255,255,255));
+	background:    -moz-linear-gradient(0deg,rgb(148, 190, 89),rgb(255,255,255));
+	background:      -o-linear-gradient(0deg,rgb(148, 190, 89),rgb(255,255,255));
+	background:         linear-gradient(0deg,rgb(148, 190, 89),rgb(255,255,255));
+	
+}
+.lawn>img{
+	position:absolute;
+	width:200px;
+	height:190px;
+	right:200px;
+	bottom:20px;
+}
